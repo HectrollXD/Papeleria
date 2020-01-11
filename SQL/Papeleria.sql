@@ -1,3 +1,5 @@
+use Papeleria;
+
 create table Empleados(
     ID_Empleado nvarchar(20),
     Apellido_Paterno nvarchar(25),
@@ -30,9 +32,9 @@ create table Reportes(
 create table Corte_De_Caja(
     Numero_De_Corte int,
     Capital_Inicial int,
-    Hora_De_Inicio datetime,
-    Hora_De_Fin datetime,
-    Fecha_De_Corte datetime,
+    Hora_De_Inicio time,
+    Hora_De_Fin time,
+    Fecha_De_Corte date,
     Total_De_Ventas int,
     Total_De_Corte int,
     Clave_De_Reporte_1 nvarchar(20),
@@ -126,3 +128,20 @@ Ejemplo de Folio de compra
     Segundo de Compra
     EJ: 09012020_201400
 */
+
+insert into Empleados
+(ID_Empleado, Apellido_Paterno, Apellido_Materno, Nombres)
+values ('EMP02ROMH10012020','RODRIGUEZ','MARTINEZ','HECTOR GEOVANNY'),
+('EMP01BAMA10012020','BAUTISTA','MORALES','AIDA LIZBETH'),
+('EMP03BASD10012020','BARBA','SANCHEZ','DAVID ALEJANDRO'),
+('EMP04MUSV10012020','MUÑOZ','SANCHEZ','VICENTE');
+
+insert into Inventario
+(Codigo_Del_Producto,Nombre_Del_Producto,Marca_Del_Producto,Descripcion_del_Producto,Precio_Del_Producto,Unidades_En_Existencia)
+values ('5401170414317','BOLIGRAFO','PAPERMATE','BOLIGRAFO PAPERMATE INKJOY KILOMETRICO 100 1.0M',5,50),
+('7502236011384','PERFORADORA UN ORIFICIO','INSPIRA','PERFORADORA INSPIRA DE UN ORIFICIO',75,2),
+('7501199420097','PEGAMENTO 850 55G','RESISTOL','PEGAMENTO BLANCO LIQUIDO 850 RESISTOL 55G',35,1),
+('0110095060046','BRILLA PEGA PLATEADO 50ML','MYLIN','PEGAMENTO CON DIAMANTINA PLATEADO 50ML MYLIN',25,1),
+('0110095060176','BRILLA PEGA NEGRO 50ML','MYLIN','PEGAMENTO CON DIAMANTINA NEGRO 50ML NYLIN',25,1),
+('696626131183','PINTURA TEXTIL NEGRO 30ML','PARISINA','PINTURA TEXTIL NEGRO 30ML PARISINA',13,2);
+
