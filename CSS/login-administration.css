@@ -1,0 +1,14 @@
+body{
+    background-image: url("../Images/wallpaper1.jpg");
+    background-repeat: repeat;
+}
+
+.cuadro{
+    padding-top: 50px;
+    background: #ffffff8c;
+    border-radius: 25px;
+}
+
+.salto{
+    margin-bottom: 30px;
+}
